@@ -16,36 +16,39 @@
 
 <body>
 <header>
-<nav class="nav-extended">
-    <div class="nav-wrapper">
-        <a href="#" class="brand-logo"><img class="responsive-img" src="images/DUCKY-01-01.png" alt="DuckLogo"></a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Log in</a></li>
-            <li><a href="./contactform/contact.php">Contact Us</a></li>
-            <li><a href="collapsible.html">Chart</a></li>
-        </ul>
-    </div>
-    <div class="nav-content">
-        <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#test1">Home</a></li>
-            <li class="tab"><a class="active" href="#test2">Products</a></li>
-            <li class="tab disabled"><a href="#test3">About US</a></li>
-            <li class="tab"><a href="#test4">Test 4</a></li>
-        </ul>
-    </div>
-</nav>
 
-<ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">JavaScript</a></li>
-</ul>
+
+    <nav>
+        <div class="nav-wrapper">
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="contactform/contact.php">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li><a href="#!">three</a></li>
+            </ul>
+
+            <a href="#" class="brand-logo center"><img class="responsive-img" src="images/DUCKY2-01-01.png" alt="DuckLogo"></a>
+
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <!-- Dropdown Trigger -->
+                <li><a class="textcolor" class="dropdown-trigger" href="#!" data-target="dropdown1">MENU<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="textcolor" href="badges.html">Search bar</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="textcolor" href="sass.html">Log In</a></li>
+                <li><a class="textcolor" href="badges.html">Favourites</a></li>
+                <li><a class="textcolor" href="collapsible.html">Cart</a></li>
+            </ul>
+
+        </div>
+       </nav>
+
+    <li class="divider"></li>
 </header>
 
 <!--JavaScript at end of body for optimized loading-->
 <script type="text/javascript" src="materialize/js/bin/materialize.js"></script>
-
 </body>
 
 </html>
