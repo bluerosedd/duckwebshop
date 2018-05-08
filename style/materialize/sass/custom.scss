@@ -1,0 +1,32 @@
+@import "../sass/components/color-variables";
+@import "../sass/components/color-classes";
+
+.brand-logo img {
+  height: 90px;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+  height: 95px;
+  line-height: 64px;
+}
+.nav-wrapper {
+  background-color: #ffffff;
+
+}
+ .nav a{
+   color: black;
+ }
+
+ .textcolor {
+   color: #3954a5;
+   font-size: large;
+   padding-top: 20px;
+ }
+
+ .divider {
+   background-color: #3954a5;
+ }
+
