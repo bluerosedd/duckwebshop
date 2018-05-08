@@ -1,3 +1,5 @@
+<?php require_once("../pagesfrontendcontroller/contactfunction.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
