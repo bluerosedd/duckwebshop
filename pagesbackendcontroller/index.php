@@ -1,4 +1,4 @@
-<?php require_once("../../includes/connection.php"); ?>
+<?php require_once("../includes/connection.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,23 +11,23 @@
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"> </script>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link type="text/css" rel="stylesheet" href="../../style/materialize/css/custom.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../style/materialize/css/custom.css" media="screen,projection"/>
 </head>
 <body>
 <header>
     <nav>
         <div class="nav-wrapper">
 
-            <a href="#" class="brand-logo center"><img class="responsive-img" src="../../images/DUCKY2-01-01.png" alt="DuckLogo"></a>
+            <a href="#" class="brand-logo center"><img class="responsive-img" src="../images/DUCKY2-01-01.png" alt="DuckLogo"></a>
 
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a class="textcolor" href="../../admin/CRUD/index.php">Products</a></li>
+                <li><a class="textcolor" href="index.php">Products</a></li>
                 <li><a class="textcolor" href="#!">empty</a></li>
                 <li><a class="textcolor" href="#!">empty</a></li>
             </ul>
 
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="textcolor" href="../../pagesbackendcontroller/logout.php">Log Out</a></li>
+                <li><a class="textcolor" href="logout.php">Log Out</a></li>
                 <li><a class="textcolor" href="#!">empty</a></li>
                 <li><a class="textcolor" href="#!">empty</a></li>
             </ul>
@@ -38,7 +38,7 @@
 </header>
 <body>
 <h4 align="center">Admin / Handle your ducks!</h4>
-<a href="../../pagesbackendcontroller/upload.php">Upload a new product!</a>
+<a href="upload.php">Upload a new product!</a>
 <br><br>
 
 <div class="container">
@@ -55,7 +55,7 @@
         echo "<div class=\"col s12 m3\">";
         echo "<div class=\"card\">";
 
-        echo "<div class=\"card-image\"><b>Image:</b> $row[productPicture] <br /><img src=\"../../images/$row[productPicture]\"></div>";
+        echo "<div class=\"card-image\"><b>Image:</b> $row[productPicture] <br /><img src=\"../images/$row[productPicture]\"></div>";
         echo "<div class=\"card-content\"><p><b>Product Name:</b> $row[productName] <br/><b>Code:</b> $row[code] <br/><b>Price:</b> $row[price] <b>kr</b> <br/><b>Description:</b> $row[description] <br/></p></div>";
 
         echo '<a href="deletepro.php?id='.$row['productId'].'"'; ?>

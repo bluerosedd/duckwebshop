@@ -26,7 +26,7 @@
             </ul>
 
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="textcolor" href="../users/loginuser.php">Log In</a></li>
+                <li><a class="textcolor" href="../pagesfrontendcontroller/loginuser.php">Log In</a></li>
                 <li><a class="textcolor" href="#!">Favourites</a></li>
                 <li><a class="textcolor" href="#!">Cart</a></li>
             </ul>
@@ -36,7 +36,7 @@
     <li class="divider"></li>
 </header>
 
-<form name="contact" method="post" action="../pagescontroller/contactfunction.php">
+<form name="contact" method="post" action="../pagesfrontendcontroller/contactfunction.php">
 <label for="name">Name: </label>
 <input type="text" id="name" name="name" maxlength="50" size="30">
 <br>

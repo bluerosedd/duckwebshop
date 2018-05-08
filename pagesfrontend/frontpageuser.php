@@ -28,11 +28,11 @@
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a class="textcolor" href="../index.php">Products</a></li>
                 <li><a class="textcolor" href="#!">About Us</a></li>
-                <li><a class="textcolor" href="../pagesfrontend/contact.php">Contact US</a></li>
+                <li><a class="textcolor" href="contact.php">Contact US</a></li>
             </ul>
 
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="textcolor" href="../users/loginuser.php">Log In</a></li>
+                <li><a class="textcolor" href="../pagesfrontendcontroller/loginuser.php">Log In</a></li>
                 <li><a class="textcolor" href="#!">Favourites</a></li>
                 <li><a class="textcolor" href="#!">Cart</a></li>
             </ul>
