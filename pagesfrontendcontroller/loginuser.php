@@ -1,9 +1,9 @@
-<?php require_once("../includes/connection.php"); ?>
-<?php require_once("../includes/sessionuser.php"); ?>
-<?php require_once("../includes/functions.php"); ?>
+<?php require_once("./includes/connection.php"); ?>
+<?php require_once("./includes/sessionuser.php"); ?>
+<?php require_once("./includes/functions.php"); ?>
 <?php
 		if (logged_in()) {
-		redirect_to("pagesfrontend/frontpageuser.php");
+		redirect_to("./pagesfrontend/frontpageuser.php");
 	}
 
 	// START FORM PROCESSING
@@ -21,7 +21,7 @@
                 if(password_verify($password, $found_user['password'])){
 				    $_SESSION['user_Id'] = $found_user['userId'];
 				    $_SESSION['userName'] = $found_user['userName'];
-				    redirect_to("pagesfrontend/frontpageuser.php");
+				    redirect_to("./pagesfrontend/frontpageuser.php");
 			} else {
 				// username/password combo was not found in the database
 				$message = "Username/password combination incorrect.<br />

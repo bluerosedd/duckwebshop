@@ -1,6 +1,6 @@
 <?php
-require_once("../includes/connection.php");
-require_once("../index.php");
+require_once("./includes/connection.php");
+
 
 $result=mysqli_query($connection, "SELECT * FROM products ORDER BY productId DESC");
 $i=0;

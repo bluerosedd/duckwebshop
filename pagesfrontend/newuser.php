@@ -15,28 +15,7 @@
     <link type="text/css" rel="stylesheet" href="../style/materialize/css/custom.css" media="screen,projection"/>
 </head>
 <body>
-<header>
-    <nav>
-        <div class="nav-wrapper">
 
-            <a href="#" class="brand-logo center"><img class="responsive-img" src="../images/DUCKY2-01-01.png" alt="DuckLogo"></a>
-
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a class="textcolor" href="../index.php">Products</a></li>
-                <li><a class="textcolor" href="#!">About Us</a></li>
-                <li><a class="textcolor" href="../pagesfrontend/contact.php">Contact US</a></li>
-            </ul>
-
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="textcolor" href="loginuser.php">Log In</a></li>
-                <li><a class="textcolor" href="#!">Favourites</a></li>
-                <li><a class="textcolor" href="#!">Cart</a></li>
-            </ul>
-
-        </div>
-    </nav>
-    <li class="divider"></li>
-</header>
 
 <h2>Create New User</h2>
 

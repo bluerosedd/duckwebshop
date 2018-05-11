@@ -4,7 +4,7 @@
 
 <?php
 		if (logged_in()) {
-		redirect_to("/backendindex.php");
+		redirect_to("../backendindex.php");
 	}
 
 
@@ -23,7 +23,7 @@
                 if(password_verify($password, $found_user['password'])){
 				    $_SESSION['user_id'] = $found_user['employeeId'];
 				    $_SESSION['userName'] = $found_user['userName'];
-				    redirect_to("/backendindex.php");
+				    redirect_to("../backendindex.php");
 			} else {
 				// username/password combo was not found in the database
 				$message = "Username/password combination incorrect.<br />

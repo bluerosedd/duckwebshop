@@ -25,15 +25,26 @@ require_once("includes/connection.php");
             <a href="#" class="brand-logo center"><img class="responsive-img" src="images/DUCKY2-01-01.png" alt="DuckLogo"></a>
 
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a class="textcolor" href="pagesfrontendcontroller/products.php">Products</a></li>
-                <li><a class="textcolor" href="#!">About Us</a></li>
-                <li><a class="textcolor" href="pagesfrontend/contact.php">Contact US</a></li>
+            <li><a class="textcolor" href="#!"><i class="material-icons">search</i></a></li>
             </ul>
 
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="textcolor" href="pagesfrontendcontroller/loginuser.php">Log In</a></li>
-                <li><a class="textcolor" href="#!">Favourites</a></li>
-                <li><a class="textcolor" href="#!">Cart</a></li>
+                <li><a class="textcolor" href="index.php?page=login">Log in/Sign up</a></li>
+                <li><a class="textcolor" href="#!"><i class="material-icons">favorite</i></a></li>
+                <li><a class="textcolor" href="#!"><i class="material-icons">add_shopping_cart</i></a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <li class="divider"></li>
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+
+            <ul id="nav-mobile" >
+                <li ><a class="textcolor" href="index.php?page">Home</a></li>
+                <li ><a class="textcolor" href="index.php?page=products">Products</a></li>
+                <li ><a class="textcolor" href="index.php?page=aboutus">About Us</a></li>
+                <li ><a class="textcolor" href="index.php?page=contact">Contact US</a></li>
             </ul>
 
         </div>
@@ -41,7 +52,40 @@ require_once("includes/connection.php");
     <li class="divider"></li>
 </header>
 
+<?php
+if (isset($_GET['page'])){
+    $page = $_GET['page'];
+}else{
+    $page = "index";}
+
+switch($page) {
+
+    default:
+        include('pagesfrontend/home.php');
+        break;
+
+    case "contact":
+        include('pagesfrontend/contact.php');
+        break;
+
+    case "products":
+        include('pagesfrontendcontroller/products.php');
+        break;
+
+    case "login":
+        include('pagesfrontend/loginuser.php');
+        break;
+
+    case "aboutus":
+        include('pagesfrontend/about.php');
+        break;
+
+
+}
+?>
+
     <div class="container">
 
 </div>
 </body>
+
