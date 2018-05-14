@@ -6,19 +6,26 @@
 </head>
 <body>
 
-
-<form name="contact" method="post" action="../pagesfrontendcontroller/contactfunction.php">
-<label for="name">Name: </label>
-<input type="text" id="name" name="name" maxlength="50" size="30">
-<br>
-<label for="email">Email: </label>
-<input type="text" id="email" name="email" maxlength="80" size="30">
-<br>
-<label for="message">Message: </label>
-<textarea name="message" id="message" maxlength="1000" cols="25" rows="6"></textarea>
-<br>
-    <a class="waves-effect waves-light btn"><input type="submit" value="Send"><i class="material-icons right">send</i></a>
-</form>
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card-panel">
+        <span class="card-title"><h5>Contact us</h5></span>
+        <br>
+        <form name="contact" method="post" action="../pagesfrontendcontroller/contactfunction.php">
+       <label for="name"> <h6>Name: </h6></label>
+        <input type="text" id="name" name="name" maxlength="50" size="30">
+        <br>
+            <label for="email"><h6>Email:</h6></label>
+        <input type="text" id="email" name="email" maxlength="80" size="30">
+        <br>
+        <label for="message"><h6>Message: </h6> </label>
+        <textarea name="message" id="message" maxlength="1000" cols="25" rows="6"></textarea>
+        <br> <br>
+        <a class="waves-effect waves-light btn"><input type="submit" value="Send"><i class="material-icons right">send</i></a>
+        </form>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

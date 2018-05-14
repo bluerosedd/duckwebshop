@@ -3,7 +3,7 @@ require_once("includes/connection.php");
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<div lang="en">
 <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,10 +24,6 @@ require_once("includes/connection.php");
 
             <a href="#" class="brand-logo center"><img class="responsive-img" src="images/DUCKY2-01-01.png" alt="DuckLogo"></a>
 
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a class="textcolor" href="#!"><i class="material-icons">search</i></a></li>
-            </ul>
-
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a class="textcolor" href="index.php?page=login">Log in/Sign up</a></li>
                 <li><a class="textcolor" href="#!"><i class="material-icons">favorite</i></a></li>
@@ -36,21 +32,22 @@ require_once("includes/connection.php");
 
         </div>
     </nav>
-    <li class="divider"></li>
+
     <nav class="nav-extended">
         <div class="nav-wrapper">
 
-            <ul id="nav-mobile" >
-                <li ><a class="textcolor" href="index.php?page">Home</a></li>
-                <li ><a class="textcolor" href="index.php?page=products">Products</a></li>
-                <li ><a class="textcolor" href="index.php?page=aboutus">About Us</a></li>
-                <li ><a class="textcolor" href="index.php?page=contact">Contact US</a></li>
+            <ul id="nav-mobile">
+            <li ><a class="textcolor-extended" href="index.php?page">Home</a></li>
+            <li ><a class="textcolor-extended" href="index.php?page=products">Products</a></li>
+            <li ><a class="textcolor-extended" href="index.php?page=aboutus">About us</a></li>
+            <li ><a class="textcolor-extended" href="index.php?page=contact">Contact us</a></li>
             </ul>
 
         </div>
     </nav>
-    <li class="divider"></li>
+
 </header>
+<div class="container">
 
 <?php
 if (isset($_GET['page'])){
@@ -69,7 +66,7 @@ switch($page) {
         break;
 
     case "products":
-        include('pagesfrontendcontroller/products.php');
+        include('pagesfrontend/products.php');
         break;
 
     case "login":
@@ -82,10 +79,35 @@ switch($page) {
 
 
 }
-?>
 
-    <div class="container">
+?>
 
 </div>
 </body>
 
+
+</div>
+<footer id="myfooter" class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Contact Us</h5>
+                <p class="grey-text text-lighten-4">Tlf: 53805606</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Follow us</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Youtube</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2018 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
+</footer>

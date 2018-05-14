@@ -1,6 +1,11 @@
 @import "../sass/components/color-variables";
 @import "../sass/components/color-classes";
 
+
+.container{
+ padding: 0px;
+}
+
 .brand-logo img {
   height: 90px;
   padding-left: 10px;
@@ -9,16 +14,19 @@
 }
 
 nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
-  height: 95px;
-  line-height: 64px;
+  height: 90px;
+  line-height: 60px;
 }
+
 .nav-wrapper {
   background-color: #ffffff;
-
+  border-bottom: solid #3954a5 1px;
 }
- .nav a{
-   color: black;
- }
+
+.nav-extended{
+  height: 50px;
+  line-height: 50px;
+}
 
  .textcolor {
    color: #3954a5;
@@ -26,7 +34,23 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
    padding-top: 20px;
  }
 
- .divider {
+ .textcolor-extended{
+   color: #3954a5;
+   font-size: large;
+ }
+ .btn{
    background-color: #3954a5;
  }
+
+.a.textcolor-extended:hover {
+
+  color: #3954a5;
+
+  text-decoration: white;
+}
+
+#myfooter{
+  background-color: #3954a5;
+}
+
 

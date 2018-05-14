@@ -1,5 +1,5 @@
 <?php
-require_once("./includes/connection.php");
+require_once("../includes/connection.php");
 
 
 $result=mysqli_query($connection, "SELECT * FROM products ORDER BY productId DESC");
@@ -13,20 +13,20 @@ while($row=mysqli_fetch_array($result)) {
         echo "<div class=\"row\">";
     }
 
-        echo "<div class=\"col s12 m3\" >";
-        echo "<div class=\"card\">";
+    echo "<div class=\"col s12 m3\">";
+    echo "<div class=\"card\">";
 
-        echo "<div class=\"card-image\"><img src=\"../images/$row[productPicture]\"></div>";
-        echo "<div class=\"card-content\">
+    echo "<div class=\"card-image\"><img src=\"../images/$row[productPicture]\"></div>";
+    echo "<div class=\"card-content\">
                    <p>
-                       $row[productName] <br/>
+                       <b>Product Name:</b> $row[productName] <br/>
                        <b>Price:</b> $row[price] <b>kr</b> <br/>
-                      
+                       <b>Description:</b> $row[description] <br/>
                    </p>
               </div>";
 
-        echo "</div>";
-        echo "</div>";
+    echo "</div>";
+    echo "</div>";
 
     if($i == 4) {
 
@@ -36,5 +36,4 @@ while($row=mysqli_fetch_array($result)) {
 
 
 }mysqli_close($connection);
-
 

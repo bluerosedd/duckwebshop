@@ -22,7 +22,7 @@
 
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a class="textcolor" href="index.php">Products</a></li>
-                <li><a class="textcolor" href="#!">empty</a></li>
+                <li><a class="textcolor" href="aboutus.php">About us</a></li>
                 <li><a class="textcolor" href="#!">empty</a></li>
             </ul>
 

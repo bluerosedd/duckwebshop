@@ -4,13 +4,13 @@
 </head>
 
 <body>
-<h4 align="center">This is what our company is made of! ABOUT US!</h4>
+<h4 align="center">Edit company description</h4>
 
 <div class="row">
     <div >
-        <div class="card-panel">
-        <span>
-                <?php require_once("./includes/connection.php");
+        <div class="card-panel teal">
+        <span class="white-text">
+                <?php require_once("../includes/connection.php");
 
                 $result=mysqli_query($connection, "SELECT * FROM company ORDER BY description DESC");
                 $i=0;
@@ -29,6 +29,9 @@
         </div>
     </div>
 </div>
+
+</body>
+</html>
 
 
 </body>
