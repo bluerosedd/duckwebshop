@@ -1,10 +1,10 @@
-<?php require_once("../includes/connection.php"); ?>
-<?php require_once("../includes/sessionbackend.php"); ?>
-<?php require_once("../includes/functions.php"); ?>
+<?php require_once("./includes/connection.php"); ?>
+<?php require_once("./includes/sessionbackend.php"); ?>
+<?php require_once("./includes/functions.php"); ?>
 
 <?php
 		if (logged_in()) {
-		redirect_to("../backendindex.php");
+		redirect_to("backendindex.php?page");
 	}
 
 

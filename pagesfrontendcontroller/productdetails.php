@@ -1,39 +1,41 @@
 <?php
-require_once("../includes/connection.php");
+require_once("./includes/connection.php");
+
+$productId = $_GET['productId'];
+$result=mysqli_query($connection, "SELECT * FROM products WHERE productId = $productId LIMIT 1");
+$row=mysqli_fetch_array($result);
+
+?>
 
 
-$result=mysqli_query($connection, "SELECT * FROM products ORDER BY productId DESC");
-$i=0;
+    <div class="row">
+        <div class="col s8 m5">
+            <div class="card">
+                <div class="card-image">
+                    <img src="../images/<?php echo $row['productPicture']?>">
+                </div>
+            </div>
+        </div>
 
 
-while($row=mysqli_fetch_array($result)) {
-    $i++;
-    if($i == 1) {
+        <div class="col s12 m7">
+            <div class="card-panel">
+                <div class="card-content">
 
-        echo "<div class=\"row\">";
-    }
-
-    echo "<div class=\"col s12 m3\">";
-    echo "<div class=\"card\">";
-
-    echo "<div class=\"card-image\"><img src=\"../images/$row[productPicture]\"></div>";
-    echo "<div class=\"card-content\">
-                   <p>
-                       <b>Product Name:</b> $row[productName] <br/>
-                       <b>Price:</b> $row[price] <b>kr</b> <br/>
-                       <b>Description:</b> $row[description] <br/>
-                   </p>
-              </div>";
-
-    echo "</div>";
-    echo "</div>";
-
-    if($i == 4) {
-
-        echo "</div>";
-        $i=0;
-    }
+                        <h5><?php echo $row['productName']?></h5>
+                    <p>
+                        <?php echo $row['description']?> <br/>
+                        <b>Price:</b> <?php echo $row['price'] ?> <b>kr</b> <br/>
+                    </p>
+                    <a class="textcolor" href="#!"><i class="material-icons">favorite</i>Save to favorites</a>
+                    <a class="textcolor" href="#!"><i class="material-icons">add_shopping_cart</i>Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-}mysqli_close($connection);
+
+<?php
+mysqli_close($connection);
 

@@ -4,12 +4,15 @@
 </head>
 
 <body>
-<h4 align="center">This is what our company is made of! ABOUT US!</h4>
+<div class="tittlecolor">
+    <h4 >DUCKY HISTORY</h4>
+</div>
+
 
 <div class="row">
     <div >
         <div class="card-panel">
-        <span>
+        <span class="flow-text">
                 <?php require_once("./includes/connection.php");
 
                 $result=mysqli_query($connection, "SELECT * FROM company ORDER BY description DESC");

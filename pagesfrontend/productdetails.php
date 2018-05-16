@@ -5,7 +5,7 @@
 <body>
 <body>
 
-<br> <h1 align="center">Product detail</h1> </br>
+<br> <h4 align="center">Product detail</h4> </br>
 
 <?php require_once("./pagesfrontendcontroller/productdetails.php");?>
 

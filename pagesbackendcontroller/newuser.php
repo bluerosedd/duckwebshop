@@ -1,6 +1,6 @@
-<?php require_once("../includes/sessionbackend.php");
-require_once("../includes/connection.php");
-require_once("../includes/functions.php");
+<?php require_once("./includes/sessionbackend.php");
+require_once("./includes/connection.php");
+require_once("./includes/functions.php");
 //confirm_logged_in(); ?>
 
 <?php

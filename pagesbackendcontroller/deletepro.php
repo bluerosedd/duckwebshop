@@ -1,4 +1,4 @@
-<?php require_once("../includes/connection.php");
+<?php require_once("./includes/connection.php");
 
 $id=$_GET['id'];
 $query = "SELECT * FROM products WHERE productId='$id'";

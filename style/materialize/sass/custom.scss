@@ -2,9 +2,52 @@
 @import "../sass/components/color-classes";
 
 
+// Nav bar ;
 .container{
- padding: 0px;
+  padding: 0;
 }
+
+nav ul li a {
+  &:hover {
+    background: transparentize(#faa61a, 0.5);
+  }
+  &:active {
+    background-color: #faa61a;
+  }
+  }
+
+nav .coloredIcons ul li a  {
+  &:focus {
+    color: #faa61a;
+    background-color:  transparent;
+  }
+
+  &:hover {
+    color: #faa61a;
+    background-color:  transparent;
+  }
+
+  &:active {
+    color: #faa61a;
+    background-color:  transparent;
+  }
+}
+
+a:focus{background-color: none;}
+
+nav ul li.active > a {
+  background: transparentize(#faa61a, 0.2);
+}
+
+nav .coloredIcons ul li.active > a {
+  color: #faa61a;
+  background-color:  transparent;
+}
+
+nav .coloredIcons ul li:hover, nav ul li.active {
+  background-color: transparent;
+}
+
 
 .brand-logo img {
   height: 90px;
@@ -28,6 +71,8 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   line-height: 50px;
 }
 
+// Text ;
+
  .textcolor {
    color: #3954a5;
    font-size: large;
@@ -38,19 +83,30 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
    color: #3954a5;
    font-size: large;
  }
- .btn{
-   background-color: #3954a5;
- }
 
 .a.textcolor-extended:hover {
 
   color: #3954a5;
-
   text-decoration: white;
 }
+
+.tittlecolor{
+  color: #3954a5;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+// Buttons ;
+ .btn{
+   background-color: #3954a5;
+ }
+
+
+ //Footer ;
 
 #myfooter{
   background-color: #3954a5;
 }
-
 

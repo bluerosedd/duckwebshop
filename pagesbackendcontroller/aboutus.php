@@ -10,7 +10,7 @@
     <div >
         <div class="card-panel teal">
         <span class="white-text">
-                <?php require_once("../includes/connection.php");
+                <?php require_once("./includes/connection.php");
 
                 $result=mysqli_query($connection, "SELECT * FROM company ORDER BY description DESC");
                 $i=0;
@@ -29,10 +29,6 @@
         </div>
     </div>
 </div>
-
-</body>
-</html>
-
 
 </body>
 </html>

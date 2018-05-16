@@ -13,13 +13,13 @@
         <br>
         <form name="contact" method="post" action="../pagesfrontendcontroller/contactfunction.php">
        <label for="name"> <h6>Name: </h6></label>
-        <input type="text" id="name" name="name" maxlength="50" size="30">
+        <input placeholder="Insert name here" type="text" id="name" name="name" maxlength="50" size="30">
         <br>
             <label for="email"><h6>Email:</h6></label>
-        <input type="text" id="email" name="email" maxlength="80" size="30">
+        <input placeholder="Insert your email here" type="text" id="email" name="email" maxlength="80" size="30">
         <br>
         <label for="message"><h6>Message: </h6> </label>
-        <textarea name="message" id="message" maxlength="1000" cols="25" rows="6"></textarea>
+        <textarea placeholder="Write your message here" name="message" id="message" maxlength="1000" cols="25" rows="6"></textarea>
         <br> <br>
         <a class="waves-effect waves-light btn"><input type="submit" value="Send"><i class="material-icons right">send</i></a>
         </form>
