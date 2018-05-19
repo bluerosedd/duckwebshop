@@ -33,8 +33,6 @@ nav .coloredIcons ul li a  {
   }
 }
 
-a:focus{background-color: none;}
-
 nav ul li.active > a {
   background: transparentize(#faa61a, 0.2);
 }
@@ -84,11 +82,7 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
    font-size: large;
  }
 
-.a.textcolor-extended:hover {
 
-  color: #3954a5;
-  text-decoration: white;
-}
 
 .tittlecolor{
   color: #3954a5;
@@ -102,6 +96,9 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
  .btn{
    background-color: #3954a5;
  }
+ .btn:hover{
+   background-color: #faa61a;
+ }
 
 
  //Footer ;
@@ -110,3 +107,10 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   background-color: #3954a5;
 }
 
+// CARDS
+
+.cardlinks{
+  padding:0 6px 6px 6px;
+  display: grid;
+  grid-row-gap: 3px;
+}

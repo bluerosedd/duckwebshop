@@ -1618,9 +1618,6 @@ nav .coloredIcons ul li a:active {
   color: #faa61a;
   background-color: transparent; }
 
-a:focus {
-  background-color: none; }
-
 nav ul li.active > a {
   background: rgba(250, 166, 26, 0.8); }
 
@@ -1658,10 +1655,6 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   color: #3954a5;
   font-size: large; }
 
-.a.textcolor-extended:hover {
-  color: #3954a5;
-  text-decoration: white; }
-
 .tittlecolor {
   color: #3954a5;
   margin-top: 40px;
@@ -1672,7 +1665,15 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 .btn {
   background-color: #3954a5; }
 
+.btn:hover {
+  background-color: #faa61a; }
+
 #myfooter {
   background-color: #3954a5; }
+
+.cardlinks {
+  padding: 0 6px 6px 6px;
+  display: grid;
+  grid-row-gap: 3px; }
 
 /*# sourceMappingURL=custom.css.map */
