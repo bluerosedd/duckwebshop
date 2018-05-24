@@ -1,4 +1,6 @@
 <?php
+
+//FRONTEND SWITCH CASE CONTROLLER
 if (isset($_GET['page'])){
     $page = $_GET['page'];
 }else{
@@ -42,7 +44,12 @@ switch($page) {
         include('pagesfrontend/cart.php');
         break;
 
+    case "purchase":
+        include('pagesfrontend/purchase.php');
+        break;
+
 
 
 }
+
 

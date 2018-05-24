@@ -19,7 +19,7 @@ require_once("includes/connection.php");
     <nav >
         <div class="nav-wrapper coloredIcons">
 
-            <a href="#" class="brand-logo center"><img class="responsive-img" src="images/DUCKY2-01-01.png" alt="DuckLogo"></a>
+            <a href="index.php" class="brand-logo center"><img class="responsive-img" src="images/DUCKY2-01-01.png" alt="DuckLogo"></a>
 
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li class="<?php if(isset($_GET['page']) && $_GET['page']=='login') {echo 'active';} ?>">
@@ -36,6 +36,7 @@ require_once("includes/connection.php");
 
         </div>
     </nav>
+
 
     <nav class="nav-extended">
         <div class="nav-wrapper">
@@ -65,9 +66,8 @@ require_once("includes/connection.php");
 
 </div>
 </body>
-
-
 </div>
+
 <footer id="myfooter" class="page-footer">
     <div class="container">
         <div class="row">

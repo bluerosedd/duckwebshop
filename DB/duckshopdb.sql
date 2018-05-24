@@ -1,309 +1,114 @@
--- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Apr 22, 2018 at 08:28 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+DROP DATABASE IF EXISTS duckshopDB;
+CREATE DATABASE duckshopDB;
+USE duckshopDB;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
+CREATE TABLE company (
+companyId int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+name varchar(40) NOT NULL,
+phone int NOT NULL,
+webpage varchar (30) NOT NULL,
+email varchar (30) NOT NULL,
+description varchar(255) NOT NULL,
+openingHours varchar(255) NOT NULL,
+logoPicture varchar(255)
+);
+
+CREATE TABLE employees (
+employeeId int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+firstName varchar (20) NOT NULL,
+lastName varchar (30) NOT NULL,
+phone int NOT NULL,
+emailAddress varchar (30),
+userName varchar (25) NOT NULL,
+password varchar (60) NOT NULL,
+role varchar (30) NOT NULL
+);
+
+CREATE TABLE news (
+newsId int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+newsTitle varchar (50) NOT NULL,
+description varchar (255) NOT NULL,
+newsPicture varchar (255) NOT NULL,
+createdDay int,
+createdMonth int,
+createdYear int
+);
+
+CREATE TABLE users (
+userId int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+firstName varchar (30) NOT NULL,
+lastName varchar (40) NOT NULL,
+emailAddress varchar (255) NOT NULL,
+birthDay int,
+birthMonth int,
+birthYear int,
+userName varchar (25) NOT NULL,
+password varchar (60) NOT NULL,
+streetName varchar (40) NOT NULL,
+streetNumber int NOT NULL,
+city varchar (30) NOT NULL,
+zipCode int (10) NOT NULL
+);
+
+CREATE TABLE categories (
+categoryId int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+categoryName varchar (40) NOT NULL,
+description varchar (255)
+);
+
+CREATE TABLE orders (
+orderId int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+orderStatus varchar (30),
+orderPurchase varchar (10),
+userId int,
+FOREIGN KEY (userId) REFERENCES users (userId)
+);
+
+CREATE TABLE products (
+productId int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+productName varchar (255) NOT NULL,
+code varchar (255) NOT NULL,
+price decimal(15,2) NOT NULL,
+description varchar (255),
+productPicture varchar (255) NOT NULL,
+isDailySpecialOffer varchar (10),
+categoryId int,
+FOREIGN KEY (categoryId) REFERENCES categories (categoryId),
+UNIQUE KEY `product_code` (`code`)
+) ;
+
+CREATE TABLE orderDetails (
+orderDetailsId int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+quantity int NOT NULL,
+orderId int,
+productId int,
+FOREIGN KEY (orderId) REFERENCES orders (orderId),
+FOREIGN KEY (productId) REFERENCES products (productId)
+);
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `duckshopdb`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `categories`
---
-
-CREATE TABLE `categories` (
-  `categoryId` int(11) NOT NULL,
-  `categoryName` varchar(40) NOT NULL,
-  `description` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `company`
---
-
-CREATE TABLE `company` (
-  `companyId` int(11) NOT NULL,
-  `name` varchar(40) NOT NULL,
-  `phone` int(11) NOT NULL,
-  `webpage` varchar(30) NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `logoPicture` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `employees`
---
-
-CREATE TABLE `employees` (
-  `employeeId` int(11) NOT NULL,
-  `firstName` varchar(20) NOT NULL,
-  `lastName` varchar(30) NOT NULL,
-  `phone` int(11) NOT NULL,
-  `emailAddress` varchar(30) DEFAULT NULL,
-  `userName` varchar(25) NOT NULL,
-  `password` varchar(60) NOT NULL,
-  `role` varchar(30) NOT NULL,
-  `createdDay` int(11) DEFAULT NULL,
-  `createdMonth` int(11) DEFAULT NULL,
-  `createdYear` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `employees`
---
-
-INSERT INTO `employees` (`employeeId`, `firstName`, `lastName`, `phone`, `emailAddress`, `userName`, `password`, `role`, `createdDay`, `createdMonth`, `createdYear`) VALUES
-(1, 'Patricia', 'Diaz', 53805606, 'pd.joergensen@gmail.com', 'pattifatti', '$2y$15$Q.rE3kqj3kpbH5AiVWP5bebiT5v3FE9ghsjMXT9kLY00ydtemO/I6', 'admin', NULL, NULL, NULL),
-(2, '', '', 0, NULL, 'pattifatti', '$2y$15$VdpSYQ20vOK.zB/ErYfdb.mrC3FWmmYAPlubdnvGGQbHfqZnetky2', '', NULL, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `news`
---
-
-CREATE TABLE `news` (
-  `newsId` int(11) NOT NULL,
-  `newsTitle` varchar(50) NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `createdDay` int(11) DEFAULT NULL,
-  `createdMonth` int(11) DEFAULT NULL,
-  `createdYear` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `orderdetails`
---
-
-CREATE TABLE `orderdetails` (
-  `orderDetailsId` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `orderId` int(11) DEFAULT NULL,
-  `productId` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `orders`
---
-
-CREATE TABLE `orders` (
-  `orderId` int(11) NOT NULL,
-  `orderStatus` varchar(30) DEFAULT NULL,
-  `orderPurchase` varchar(10) DEFAULT NULL,
-  `userId` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `products`
---
-
-CREATE TABLE `products` (
-  `productId` int(11) NOT NULL,
-  `productName` varchar(255) NOT NULL,
-  `code` varchar(255) NOT NULL,
-  `price` decimal(15,2) NOT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `productPicture` varchar(255) NOT NULL,
-  `isDailySpecialOffer` varchar(10) DEFAULT NULL,
-  `categoryId` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `products`
---
-
+INSERT INTO `company` (`companyId`, `name`, `phone`, `webpage`, `email`, `description`,`openingHours`, `logoPicture`) VALUES
+(1, 'Ducky Duckwebshop', 54805606, 'www.patridesign.dk','pd.joergensen@gmail.com', 'hfiaugifuaguof\r\nsdguhsfisdgiusf sdjghsiudfgilauesfglisdiflbslif sdggsdggasdgsagdg','Man 10:00', NULL);
+INSERT INTO `employees` (`employeeId`, `firstName`, `lastName`, `phone`, `emailAddress`, `userName`, `password`, `role`) VALUES
+(1, 'Patricia', 'Diaz', 53805606, 'pd.joergensen@gmail.com', 'pattifatti', '$2y$15$Q.rE3kqj3kpbH5AiVWP5bebiT5v3FE9ghsjMXT9kLY00ydtemO/I6', 'admin'),
+(2, 'Jakob', 'Pettit', 12435, 'j.pettit@gmail.com', 'nocrazyshet', '$2y$15$LrD96zEU1xfo0Sa0smVk..TK.7yU1U7XwriLISbD06xzzXfWb1Loy', 'agadgahg');
 INSERT INTO `products` (`productId`, `productName`, `code`, `price`, `description`, `productPicture`, `isDailySpecialOffer`, `categoryId`) VALUES
-(1, 'Duck1', '1234edr12', '0.00', 'Beautiful duck ', 'duck1.jpg', NULL, NULL),
-(2, 'duck twoo', 'we46gdsw', '0.00', 'eiiiiiii', 'duck2.jpg', NULL, NULL),
-(3, 'Hello Duck', 'jajwaj1', '0.00', 'This is a duck', 'duck5.jpg', NULL, NULL),
-(6, 'duuakc', 'hawfhawfh', '0.00', 'Wuakc wuak', 'duck4.jpg', NULL, NULL),
-(8, 'sasad3ef', 'segdhyg76kg4r', '0.00', 'daegszrjztjzdrhd hdhdhdhzdh', 'duck2.jpg', NULL, NULL);
+(1, 'Duck1', '1234edr12', '50.00', 'Beautiful duck ', 'duck1.jpg', NULL, NULL),
+(2, 'duck twoo', 'we46gdsw', '25.00', 'eiiiiiii', 'duck2.jpg', NULL, NULL),
+(3, 'Hello Duck', 'jajwaj1', '35.00', 'This is a duck', 'duck5.jpg', '66.00', NULL),
+(6, 'duck23', '2123332', '100.00', 'Wuakc wuak', 'duck4.jpg', NULL, NULL),
+(8, 'eder', 'eder21', '95.00', 'Blue duck chilling in the pool', 'duck2.jpg', NULL, NULL),
+(9, 'wwwwwww', '44443', '123.00', 'rrrrrr', 'ru.jpg', NULL, NULL),
+(10, 'wwwwww', 'qqqqq', '12.00', '33333', 'ssssssss.PNG', NULL, NULL),
+(11, 'wwww', 'qws3459', '125.00', '234rrffff', 'snnnnn.PNG', NULL, NULL),
+(12, 'qqqqq', 'iuwrq965', '234.00', '2oiahfoahf', 'WordPress-logotype-wmark.png', NULL, NULL),
+(13, 'qqqqqqqqqqq', 'ewrtwetrfgvbc', '236.00', 'wwwwwwwww', 'ru.jpg', NULL, NULL),
+(14, 'qqqqlllllll', 'oufkmgbv ', '678.00', 'uytgvuhyj', 'WordPress-logotype-wmark.png', NULL, NULL),
+(15, 'wwwwwwwwwww', 'oplthg', '234.00', 'kkkkkkkkkkkkkkkk', '6.PNG', NULL, NULL),
+(16, 'www', 'gfhdfs', '456.00', 'nnnnnnnnnn', '6.PNG', NULL, NULL),
+(17, 'ghv vjg', 'jrtf6yh45y', '345.00', 'dfgdfbd', 'WordPress.svg.png', NULL, NULL),
+(18, 'qqqqqqqqqqqqqqqq', 'jgh79', '345.00', 'q4444444444444444', 'ru.jpg', NULL, NULL),
+(19, 'waserdf', '45er6y7', '238.00', 'kmjhngbvf', 'ru.jpg', NULL, NULL);
+INSERT INTO `users` (`userId`, `firstName`, `lastName`, `emailAddress`, `birthDay`, `birthMonth`, `birthYear`, `userName`, `password`, `streetName`, `streetNumber`, `city`, `zipCode`) VALUES
+(1, 'rata', 'rato', 'ratato@gmail.com', 3, 4, 1993, 'rata', '$2y$15$U1sJXsu/8mmLlYIsM.F1NerPh2C5Y2DqT.tduGCfQesSRtVQ2ZzjG', 'lirio', 6, 'toledo', 45500);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `userId` int(11) NOT NULL,
-  `firstName` varchar(30) NOT NULL,
-  `lastName` varchar(40) NOT NULL,
-  `emailAddress` varchar(255) NOT NULL,
-  `birthDay` int(11) DEFAULT NULL,
-  `birthMonth` int(11) DEFAULT NULL,
-  `birthYear` int(11) DEFAULT NULL,
-  `userName` varchar(25) NOT NULL,
-  `password` varchar(60) NOT NULL,
-  `streetName` varchar(40) NOT NULL,
-  `streetNumber` int(11) NOT NULL,
-  `city` varchar(30) NOT NULL,
-  `zipCode` int(10) NOT NULL,
-  `createdDay` int(11) DEFAULT NULL,
-  `createdMonth` int(11) DEFAULT NULL,
-  `createdYear` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`categoryId`);
-
---
--- Indexes for table `company`
---
-ALTER TABLE `company`
-  ADD PRIMARY KEY (`companyId`);
-
---
--- Indexes for table `employees`
---
-ALTER TABLE `employees`
-  ADD PRIMARY KEY (`employeeId`);
-
---
--- Indexes for table `news`
---
-ALTER TABLE `news`
-  ADD PRIMARY KEY (`newsId`);
-
---
--- Indexes for table `orderdetails`
---
-ALTER TABLE `orderdetails`
-  ADD PRIMARY KEY (`orderDetailsId`),
-  ADD KEY `orderId` (`orderId`),
-  ADD KEY `productId` (`productId`);
-
---
--- Indexes for table `orders`
---
-ALTER TABLE `orders`
-  ADD PRIMARY KEY (`orderId`),
-  ADD KEY `userId` (`userId`);
-
---
--- Indexes for table `products`
---
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`productId`),
-  ADD UNIQUE KEY `product_code` (`code`),
-  ADD KEY `categoryId` (`categoryId`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`userId`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `categoryId` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `company`
---
-ALTER TABLE `company`
-  MODIFY `companyId` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `employees`
---
-ALTER TABLE `employees`
-  MODIFY `employeeId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `news`
---
-ALTER TABLE `news`
-  MODIFY `newsId` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `orderdetails`
---
-ALTER TABLE `orderdetails`
-  MODIFY `orderDetailsId` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `orders`
---
-ALTER TABLE `orders`
-  MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `products`
---
-ALTER TABLE `products`
-  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `orderdetails`
---
-ALTER TABLE `orderdetails`
-  ADD CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`orderId`) REFERENCES `orders` (`orderId`),
-  ADD CONSTRAINT `orderdetails_ibfk_2` FOREIGN KEY (`productId`) REFERENCES `products` (`productId`);
-
---
--- Constraints for table `orders`
---
-ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`);
-
---
--- Constraints for table `products`
---
-ALTER TABLE `products`
-  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`categoryId`);
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -22,8 +22,8 @@ while($row=mysqli_fetch_array($result)) {
         <div class="card-content">
                    <ul>
                        <a class="textcolor right"><i class="material-icons small">favorite_border</i></a>
-                       <li><?php echo $row['productName']?> </li>
-                       <li><b>Price:</b> <?php echo $row['price'] ?> <b>kr</b></li>
+                       <li style="font-size: 17px"><?php echo $row['productName']?> </li>
+                       <li style="font-size: 17px"><b>Price:</b> <?php echo $row['price'] ?> <b>kr</b></li>
 
                    </ul>
          </div>

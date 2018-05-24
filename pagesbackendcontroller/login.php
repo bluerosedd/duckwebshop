@@ -1,10 +1,9 @@
-<?php require_once("./includes/connection.php"); ?>
 <?php require_once("./includes/sessionbackend.php"); ?>
 <?php require_once("./includes/functions.php"); ?>
 
 <?php
 		if (logged_in()) {
-		redirect_to("backendindex.php?page");
+		redirect_to("./backendindex.php?page");
 	}
 
 
@@ -21,9 +20,9 @@
 				// and only 1 match
 				$found_user = mysqli_fetch_array($result);
                 if(password_verify($password, $found_user['password'])){
-				    $_SESSION['user_id'] = $found_user['employeeId'];
+				    $_SESSION['employeeId'] = $found_user['employeeId'];
 				    $_SESSION['userName'] = $found_user['userName'];
-				    redirect_to("../backendindex.php");
+				    redirect_to("./backendindex.php?page");
 			} else {
 				// username/password combo was not found in the database
 				$message = "Username/password combination incorrect.<br />

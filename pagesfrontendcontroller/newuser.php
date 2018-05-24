@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) { // Form has been submitted.
 			$message = "User Created.";
 		} else {
 			$message = "User could not be created.";
-			$message .= "<br />" . mysql_error();
+			$message .= "<br />" . mysqli_error($connection);
 		}
 }
 

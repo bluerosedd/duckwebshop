@@ -2,6 +2,7 @@
 require_once("./includes/connection.php");
 require_once("./includes/functions.php");
 
+//PDO
 error_reporting(0);
 session_start();
 $total=0;

@@ -28,7 +28,11 @@ $row=mysqli_fetch_array($result);
                         <b>Price:</b> <?php echo $row['price'] ?> <b>kr</b> <br/>
                     </p>
                     <a class="textcolor" href="#!"><i class="material-icons">favorite</i>Save to favorites</a>
-                    <a class="textcolor" href="#!"><i class="material-icons">add_shopping_cart</i>Add to cart</a>
+                    <form method="post" action="index.php?page=products&action=addcart&productId=<?php echo $row['productId']?>">
+                        <button type="submit" class="waves-effect waves-light btn col s12"><i class="material-icons">add_shopping_cart</i>Add to cart</a>Add To Cart
+                            <input type="hidden" name="code" value="<?php print $row['code']?>"></button>
+                    </form>
+
                 </div>
             </div>
         </div>

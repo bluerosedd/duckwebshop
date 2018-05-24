@@ -7,18 +7,20 @@ $products = $stmt->fetchAll();
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-</head>
-<body>
-
 <div class="row">
     <div class="col s12 m12">
 
             <div class="tittlecolor"><h4>Shopping Cart</h4> </div>
 
-        <?php if(!empty($_SESSION['products'])):?>
+        <?php
+        if(empty($_SESSION['products'])) {
+            echo "<div class=\"section center\"> 
+                    <h5>Your cart is empty</h5>
+                    <div class=\" center\">
+                        <a  class=\"waves-effect waves-light btn\" href=\"./index.php?page=products\">Go to products</a>
+                    </div>
+                    </div>";
+        }elseif(!empty($_SESSION['products'])){?>
        <table class="striped">
 
             <thead>
@@ -40,6 +42,7 @@ $products = $stmt->fetchAll();
                 <td><?php echo "kr"; print $row["price"]; ?></td>
                 <td>
                     <a href="./index.php?page=cart&action=empty&code=<?php print $key?>"
+                       onclick="return confirm('Are you sure you want to delete this product?');"
                        class="btnRemoveAction">Remove Item
                     </a>
                 </td>
@@ -56,17 +59,27 @@ $products = $stmt->fetchAll();
                         $total = $total + $val['price'];
                     }
                     ;?>
-                    <strong>Total:</strong> <?php echo "kr"; print $total ?>
+                    <div class="section">
+                    <h5><strong>Total:</strong> <?php echo "kr"; print $total ?></h5>
+                    </div>
                 </div>
-                <div class="col s4">
+
+                <div class="section">
+                    <div class="col s4">
+                        <div>
+                            <a  class="waves-effect waves-light btn" href="./index.php?page=cart&action=emptyall"
+                                onclick="return confirm('Are you sure you want to delete all your cart?');">Empty Cart</a>
+                        </div>
+                    </div>
+                    <div class="col s4">
                     <div>
-                        <a  class="waves-effect waves-light btn" href="./index.php?page=cart&action=emptyall">Empty Cart</a>
+                        <a  class="waves-effect waves-light btn" href="./index.php?page=purchase"
+                            onclick="return confirm('Ready to purchase?');">Purchase</a>
+                    </div>
                     </div>
                 </div>
             </div>
-            <?php endif; ?>
+            <?php } ?>
         </table>
     </div>
 </div>
-</body>
-</html>

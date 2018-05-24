@@ -1,5 +1,5 @@
 <?php
-//  section_start();
+session_start();
 
 function logged_in(){
     return isset($_SESSION['employeeId']);
@@ -7,6 +7,6 @@ function logged_in(){
 
 function confirm_logged_in(){
     if(!logged_in()) {
-        redirect_to("login.php");
+        redirect_to("./backendindex.php?page=loginb");
     }
 }
