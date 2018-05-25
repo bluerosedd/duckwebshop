@@ -14,12 +14,12 @@ require_once("./pagesbackendcontroller/newsedit.php");
 
             <form name="upload" method="post" action="./backendindex.php?page=newseditb&action=update&newsId=<?php echo $row['newsId']; ?>">
 
-                    <b>Image:</b> <input  type="file" name="image" value=""><?php echo $row['newsPicture']; ?><br><br />
-                    <b>Title:</b><textarea name="newsTitle" cols="40"><?php echo $row['newsTitle']; ?></textarea><br />
-                    <b>Description:</b><textarea name="description" cols="40"><?php echo $row['description']; ?></textarea><br />
-                    <b>Created day</b><textarea type="numbers" name="createdDay" cols="11"><?php echo $row['createdDay']; ?></textarea>
-                    <b>Created month</b><textarea type="numbers" name="createdMonth" cols="11"><?php echo $row['createdMonth']; ?></textarea>
-                    <b>Created year</b><textarea type="numbers" name="createdYear" cols="11"><?php echo $row['createdYear']; ?></textarea>
+                    <b>Image:</b> <input  type="file" name="image" value=""><?php echo trim(htmlspecialchars( $row['newsPicture'])); ?><br><br />
+                    <b>Title:</b><textarea name="newsTitle" cols="40"><?php echo trim(htmlspecialchars( $row['newsTitle'])); ?></textarea><br />
+                    <b>Description:</b><textarea name="description" cols="40"><?php echo trim(htmlspecialchars($row['description'])); ?></textarea><br />
+                    <b>Created day</b><textarea type="numbers" name="createdDay" cols="11"><?php echo trim(htmlspecialchars( $row['createdDay'])); ?></textarea>
+                    <b>Created month</b><textarea type="numbers" name="createdMonth" cols="11"><?php echo trim(htmlspecialchars($row['createdMonth'])); ?></textarea>
+                    <b>Created year</b><textarea type="numbers" name="createdYear" cols="11"><?php echo trim(htmlspecialchars($row['createdYear'])); ?></textarea>
 
 
                     <input class="waves-effect waves-light btn" name="Submit" type="submit" value="Save">

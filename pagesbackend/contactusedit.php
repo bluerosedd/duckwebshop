@@ -11,11 +11,11 @@ require_once("./pagesbackendcontroller/contactusedit.php");
         <div class="card-panel">
         <span class="flow-text">
 
-             <form name="upload" method="post" action="./backendindex.php?page=contactuseditb&action=update&companyId=<?php echo $row['companyId']; ?>">
+             <form name="upload" method="post" action="./backendindex.php?page=contactuseditb&action=update&companyId=<?php echo trim(htmlspecialchars( $row['companyId'])); ?>">
 
-                    <b>Opening hours:</b> <textarea name="openingHours" cols="40"><?php echo $row['openingHours']; ?></textarea><br />
-                    <b>Phone:</b><textarea name="phone" cols="40"><?php echo $row['phone']; ?></textarea><br />
-                    <b>Email:</b><textarea name="email" cols="40"><?php echo $row['email']; ?></textarea><br />
+                    <b>Opening hours:</b> <textarea name="openingHours" cols="40"><?php echo trim(htmlspecialchars($row['openingHours'])); ?></textarea><br />
+                    <b>Phone:</b><textarea name="phone" cols="40"><?php echo trim(htmlspecialchars( $row['phone'])); ?></textarea><br />
+                    <b>Email:</b><textarea name="email" cols="40"><?php echo trim(htmlspecialchars( $row['email'])); ?></textarea><br />
 
                     <input class="waves-effect waves-light btn" name="Submit" type="submit" value="Save">
             </form>

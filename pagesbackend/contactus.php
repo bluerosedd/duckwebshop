@@ -9,7 +9,7 @@
     </div>
 
 <?php
-while($row=mysqli_fetch_array($result)) {
+while( $row=mysqli_fetch_array($result)) {
     $i++;
     if ($i == 1) {
 
@@ -22,16 +22,16 @@ while($row=mysqli_fetch_array($result)) {
             <div align="center" class="card-content">
                 <ul>
                     <li class="tittlecolor" style="font-size: 17px"><h5>Opening hours</h5></li>
-                    <li ><h5><?php echo $row['openingHours'] ?> </h5></li>
+                    <li ><h5><?php echo trim(htmlspecialchars( $row['openingHours'] ));?> </h5></li>
                     <li class="tittlecolor" style="font-size: 17px"><h5>Phone:</h5></li>
-                    <li><h5><?php echo $row['phone'] ?> </h5></li>
+                    <li><h5><?php echo  trim(htmlspecialchars($row['phone'])); ?> </h5></li>
                     <li class="tittlecolor" style="font-size: 17px"><h5>Email:</h5></li>
-                    <li><h5><?php echo $row['email'] ?> </h5></li>
+                    <li><h5><?php echo  trim(htmlspecialchars($row['email'] ));?> </h5></li>
                 </ul>
             </div>
 
             <div class="cardlinks">
-                <a href="./backendindex.php?page=contactuseditb&companyId=<?php echo $row['companyId'] ?>"
+                <a href="./backendindex.php?page=contactuseditb&companyId=<?php echo  trim(htmlspecialchars($row['companyId'])); ?>"
                    onclick="return confirm('Are you sure you want to edit?');"
                    class="waves-effect waves-light btn">Edit contact information
                 </a>

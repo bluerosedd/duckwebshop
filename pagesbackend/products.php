@@ -26,13 +26,13 @@ while($row=mysqli_fetch_array($result)) {
 
             <div class="card-content">
                 <ul>
-                    <li style="font-size: 17px"><?php echo $row['productName']?> </li>
-                    <li style="font-size: 17px"><b>Code:</b><?php echo $row['code']?> </li>
+                    <li style="font-size: 17px"><?php echo trim(htmlspecialchars($row['productName']));?> </li>
+                    <li style="font-size: 17px"><b>Code:</b><?php echo trim(htmlspecialchars( $row['code']));?> </li>
                     <li style="font-size: 17px">
                         <?php if($row['isDailySpecialOffer'] == NULL){
-                            echo "<b>Price:</b>"; echo $row['price'];
+                            echo "<b>Price:</b>"; echo trim(htmlspecialchars( $row['price']));
                         }elseif($row['isDailySpecialOffer'] == !NULL){
-                            echo "<b style='color:#faa61a;'>OfferPrice: </b>"; echo $row['isDailySpecialOffer'];
+                            echo "<b style='color:#faa61a;'>OfferPrice: </b>"; echo trim(htmlspecialchars( $row['isDailySpecialOffer']));
                         } ?>
                         <b>kr</b>
                     </li>
@@ -47,7 +47,7 @@ while($row=mysqli_fetch_array($result)) {
 
                 <a href="./backendindex.php?page=editproductb&productId=<?php echo $row['productId'] ?>"
                    onclick="return confirm('Are you sure you want to edit this product?');"
-                   class="waves-effect waves-light btn">Edit post
+                   class="waves-effect waves-light btn">Edit product
                 </a>
 
                 <a href="./backendindex.php?page=dailyofferb&productId=<?php echo $row['productId']?>"

@@ -1,7 +1,6 @@
 <?php  require_once("includes/connection.php");
-
 $productId=$_GET['productId'];
-$specialPrice = $_POST['offerPrice'];
+$specialPrice = $_POST['isDailySpecialOffer'];
 
 if(isset($_GET['action'])) {
     $action = $_GET['action'];

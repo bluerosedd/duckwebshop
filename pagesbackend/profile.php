@@ -1,11 +1,9 @@
 <?php
-require_once("./includes/connection.php");
 if(isset($_SESSION['employeeId'])){
 $employeeId = ($_SESSION['employeeId']);
 }
 $result=mysqli_query($connection, "SELECT * FROM employees WHERE employeeId='$employeeId'")or die(mysqli_error());
 $row=mysqli_fetch_array($result);
-//var_dump($_SESSION);
 ?>
 
 <br>
@@ -22,13 +20,13 @@ $row=mysqli_fetch_array($result);
     <div class="card">
         <div class="card-content">
             <form action="" method="post">
-                <b>User Name :</b><br><?php echo $row['userName']; ?><br />
+                <b>User Name :</b><br><?php echo trim(htmlspecialchars($row['userName'])); ?><br />
                 <b>Password :</b><br>**********</textarea><br />
-                <b>First Name :</b><br><?php echo $row['firstName']; ?><br />
-                <b>Last Name :</b><br> <?php echo $row['lastName']; ?><br />
-                <b>Phone :</b><br> <?php echo $row['phone']; ?><br />
-                <b>E-mail :</b><br> <?php echo $row['emailAddress']; ?><br />
-                <b>Role :</b><br> <?php echo $row['role']; ?><br />
+                <b>First Name :</b><br><?php echo trim(htmlspecialchars($row['firstName'])); ?><br />
+                <b>Last Name :</b><br> <?php echo trim(htmlspecialchars($row['lastName'])); ?><br />
+                <b>Phone :</b><br> <?php echo trim(htmlspecialchars($row['phone'])); ?><br />
+                <b>E-mail :</b><br> <?php echo trim(htmlspecialchars($row['emailAddress'])); ?><br />
+                <b>Role :</b><br> <?php echo trim(htmlspecialchars($row['role'])); ?><br />
                 <li class="divider"></li></br>
 
                 <a href="./backendindex.php?page=editprofileb&employeeId=<?php echo $row['employeeId']?>"

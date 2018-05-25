@@ -2,32 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff8b358a-15cb-4517-8f1f-af4266383c7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DB/dbprocedure.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pagesfrontend/news.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pagesfrontend/userprofile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pagesfrontend/userprofileedit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pagesfrontendcontroller/contactus.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pagesfrontendcontroller/newscontroller.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pagesfrontendcontroller/userprofile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pagesfrontendcontroller/userprofileedit.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pagesfrontend/frontpageuser.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backendindex.php" afterPath="$PROJECT_DIR$/backendindex.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/sessionuser.php" afterPath="$PROJECT_DIR$/includes/sessionuser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/switchcontroller.php" afterPath="$PROJECT_DIR$/includes/switchcontroller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackend/aboutus.php" afterPath="$PROJECT_DIR$/pagesbackend/aboutus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackend/aboutusedit.php" afterPath="$PROJECT_DIR$/pagesbackend/aboutusedit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackendcontroller/logout.php" afterPath="$PROJECT_DIR$/pagesbackendcontroller/logout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesfrontend/contact.php" afterPath="$PROJECT_DIR$/pagesfrontend/contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesfrontend/home.php" afterPath="$PROJECT_DIR$/pagesfrontend/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesfrontend/loginuser.php" afterPath="$PROJECT_DIR$/pagesfrontend/loginuser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesfrontend/purchase.php" afterPath="$PROJECT_DIR$/pagesfrontend/purchase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesfrontendcontroller/contactfunction.php" afterPath="$PROJECT_DIR$/pagesfrontendcontroller/contactfunction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesfrontendcontroller/loginuser.php" afterPath="$PROJECT_DIR$/pagesfrontendcontroller/loginuser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesfrontendcontroller/logoutuser.php" afterPath="$PROJECT_DIR$/pagesfrontendcontroller/logoutuser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesfrontendcontroller/productdetails.php" afterPath="$PROJECT_DIR$/pagesfrontendcontroller/productdetails.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesfrontendcontroller/products.php" afterPath="$PROJECT_DIR$/pagesfrontendcontroller/products.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackend/contactus.php" afterPath="$PROJECT_DIR$/pagesbackend/contactus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackend/contactusedit.php" afterPath="$PROJECT_DIR$/pagesbackend/contactusedit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackend/dailyoffer.php" afterPath="$PROJECT_DIR$/pagesbackend/dailyoffer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackend/editproduct.php" afterPath="$PROJECT_DIR$/pagesbackend/editproduct.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackend/editprofile.php" afterPath="$PROJECT_DIR$/pagesbackend/editprofile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackend/home.php" afterPath="$PROJECT_DIR$/pagesbackend/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackend/news.php" afterPath="$PROJECT_DIR$/pagesbackend/news.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackend/newsedit.php" afterPath="$PROJECT_DIR$/pagesbackend/newsedit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackend/products.php" afterPath="$PROJECT_DIR$/pagesbackend/products.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackend/profile.php" afterPath="$PROJECT_DIR$/pagesbackend/profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagesbackendcontroller/dailyoffer.php" afterPath="$PROJECT_DIR$/pagesbackendcontroller/dailyoffer.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,23 +24,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="aboutusedit.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pagesbackend/aboutusedit.php">
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pagesbackend/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aboutus.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pagesbackend/aboutus.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+            <state relative-caret-position="425">
+              <caret line="28" column="91" lean-forward="true" selection-start-line="28" selection-start-column="91" selection-end-line="28" selection-end-column="91" />
               <folding>
-                <marker date="1527209769144" expanded="true" signature="362:407" ph="SELECT * FRO... company" />
+                <marker date="1527212275065" expanded="true" signature="120:174" ph="SELECT * FRO... employees" />
               </folding>
             </state>
           </provider>
@@ -83,29 +59,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/sessionbackend.php" />
-        <option value="$PROJECT_DIR$/pagesbackendcontroller/aboutusedit.php" />
-        <option value="$PROJECT_DIR$/pagesbackendcontroller/deleteprofile.php" />
         <option value="$PROJECT_DIR$/pagesbackendcontroller/newscontroller.php" />
-        <option value="$PROJECT_DIR$/pagesbackend/news.php" />
         <option value="$PROJECT_DIR$/pagesbackendcontroller/products.php" />
         <option value="$PROJECT_DIR$/pagesbackend/editui.php" />
         <option value="$PROJECT_DIR$/pagesbackendcontroller/editpro.php" />
         <option value="$PROJECT_DIR$/pagesbackendcontroller/newsedit.php" />
         <option value="$PROJECT_DIR$/pagesbackendcontroller/editproduct.php" />
         <option value="$PROJECT_DIR$/pagesbackendcontroller/deletepro.php" />
-        <option value="$PROJECT_DIR$/pagesbackend/editproduct.php" />
-        <option value="$PROJECT_DIR$/pagesbackend/products.php" />
         <option value="$PROJECT_DIR$/includes/switchcontrollerb.php" />
-        <option value="$PROJECT_DIR$/pagesbackend/contactus.php" />
-        <option value="$PROJECT_DIR$/pagesbackend/newsedit.php" />
-        <option value="$PROJECT_DIR$/pagesbackend/contactusedit.php" />
         <option value="$PROJECT_DIR$/pagesbackendcontroller/contactusedit.php" />
         <option value="$PROJECT_DIR$/pagesfrontendcontroller/recommendationsystem.php" />
-        <option value="$PROJECT_DIR$/pagesbackend/profile.php" />
         <option value="$PROJECT_DIR$/pagesbackendcontroller/login.php" />
         <option value="$PROJECT_DIR$/pagesbackendcontroller/editprofile.php" />
-        <option value="$PROJECT_DIR$/pagesbackend/editprofile.php" />
         <option value="$PROJECT_DIR$/includes/sessionuser.php" />
         <option value="$PROJECT_DIR$/pagesfrontend/purchase.php" />
         <option value="$PROJECT_DIR$/pagesfrontend/loginuser.php" />
@@ -134,6 +99,17 @@
         <option value="$PROJECT_DIR$/DB/dbprocedure.sql" />
         <option value="$PROJECT_DIR$/pagesbackend/aboutus.php" />
         <option value="$PROJECT_DIR$/pagesbackend/aboutusedit.php" />
+        <option value="$PROJECT_DIR$/pagesbackend/contactusedit.php" />
+        <option value="$PROJECT_DIR$/pagesbackend/contactus.php" />
+        <option value="$PROJECT_DIR$/pagesbackendcontroller/dailyoffer.php" />
+        <option value="$PROJECT_DIR$/pagesbackend/dailyoffer.php" />
+        <option value="$PROJECT_DIR$/pagesbackend/editproduct.php" />
+        <option value="$PROJECT_DIR$/pagesbackend/editprofile.php" />
+        <option value="$PROJECT_DIR$/pagesbackend/home.php" />
+        <option value="$PROJECT_DIR$/pagesbackend/news.php" />
+        <option value="$PROJECT_DIR$/pagesbackend/newsedit.php" />
+        <option value="$PROJECT_DIR$/pagesbackend/products.php" />
+        <option value="$PROJECT_DIR$/pagesbackend/profile.php" />
       </list>
     </option>
   </component>
@@ -178,6 +154,11 @@
               <item name="duckshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="duckshop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="pagesbackend" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="duckshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="duckshop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pagesbackendcontroller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -255,12 +236,12 @@
       <workItem from="1527082435229" duration="11999000" />
       <workItem from="1527099594547" duration="25135000" />
       <workItem from="1527147944510" duration="9827000" />
-      <workItem from="1527159751911" duration="44116000" />
+      <workItem from="1527159751911" duration="46417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264625000" />
+    <option name="totallyTimeSpent" value="266926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -314,77 +295,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pagesfrontendcontroller/recommendationsystem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagesbackend/dailyoffer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagesbackendcontroller/dailyoffer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1527114307089" expanded="true" signature="233:317" ph="UPDATE produ... " />
-            <marker date="1527114307089" expanded="true" signature="398:484" ph="UPDATE produ... " />
-            <marker date="1527114307089" expanded="true" signature="564:615" ph="SELECT * FRO... products" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagesbackendcontroller/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1527194010860" expanded="true" signature="440:531" ph="SELECT emplo... employees" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagesfrontend/cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-809">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1527120531875" expanded="true" signature="69:91" ph="SELECT * FRO... products" />
-            <marker date="1527120531875" expanded="true" signature="402:670" ph="..." />
-            <marker date="1527120531875" expanded="true" signature="495:643" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagesfrontend/frontpageuser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagesbackendcontroller/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pagesfrontendcontroller/logoutuser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -415,16 +330,6 @@
         <state relative-caret-position="357">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagesbackend/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <marker date="1527193957807" expanded="true" signature="163:217" ph="SELECT * FRO... employees" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -461,34 +366,6 @@
             <marker date="1527194019351" expanded="true" signature="1297:1366" ph="UPDATE emplo... " />
             <marker date="1527194019351" expanded="true" signature="1401:1468" ph="UPDATE emplo... " />
             <marker date="1527194019351" expanded="true" signature="1642:1694" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagesbackend/editprofile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagesbackend/editproduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="49" column="20" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="49" selection-end-column="20" />
-          <folding>
-            <marker date="1527190537720" expanded="true" signature="765:964" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagesbackend/newsedit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="138" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="21" selection-end-column="138" />
-          <folding>
-            <marker date="1527192404057" expanded="true" signature="1690:1715" ph="..." />
           </folding>
         </state>
       </provider>
@@ -585,16 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pagesbackend/products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-          <folding>
-            <marker date="1527190631014" expanded="true" signature="1081:1095" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -607,14 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagesbackend/contactus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="64" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -673,14 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagesbackend/news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -814,13 +665,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pagesbackend/aboutus.php">
+    <entry file="file://$PROJECT_DIR$/css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding>
-            <marker date="1527209769144" expanded="true" signature="362:407" ph="SELECT * FRO... company" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -829,6 +678,132 @@
         <state relative-caret-position="442">
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/aboutus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <marker date="1527209769144" expanded="true" signature="362:407" ph="SELECT * FRO... company" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/contactus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackendcontroller/dailyoffer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <marker date="1527211487070" expanded="true" signature="241:325" ph="UPDATE produ... " />
+            <marker date="1527211487070" expanded="true" signature="406:492" ph="UPDATE produ... " />
+            <marker date="1527211487070" expanded="true" signature="572:623" ph="SELECT * FRO... products" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/contactusedit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="99" lean-forward="true" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/dailyoffer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="69" lean-forward="false" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/editproduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <marker date="1527211848858" expanded="true" signature="865:1064" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/editprofile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="69" column="2" lean-forward="true" selection-start-line="69" selection-start-column="2" selection-end-line="69" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/newsedit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <marker date="1527212098637" expanded="true" signature="1837:1862" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/newuser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding>
+            <marker date="1527212179152" expanded="true" signature="1157:1171" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagesbackend/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="28" column="91" lean-forward="true" selection-start-line="28" selection-start-column="91" selection-end-line="28" selection-end-column="91" />
+          <folding>
+            <marker date="1527212275065" expanded="true" signature="120:174" ph="SELECT * FRO... employees" />
+          </folding>
         </state>
       </provider>
     </entry>

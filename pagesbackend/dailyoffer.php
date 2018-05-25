@@ -13,9 +13,9 @@
             echo "<b>Normal price:</b> $row[price] <br/>";
 
             ?>
-            <form name="upload" method="post" action="backendindex.php?action=specialoffer&page=dailyofferb&productId=<?php echo $row['productId']?>">
+            <form name="upload" method="post" action="backendindex.php?action=specialoffer&page=dailyofferb&productId=<?php echo trim(htmlspecialchars($row['productId']));?>">
 
-                    <b>Offer price:</b><textarea name="offerPrice"><?php echo $row['isDailySpecialOffer']; ?></textarea><br />
+                    <b>Offer price:</b><textarea name="offerPrice"><?php echo trim(htmlspecialchars( $row['isDailySpecialOffer'])); ?></textarea><br />
 
                     <input name="id" type="hidden" value="<?php echo $row['productId']; ?>">
                     <input name="Submit" type="submit" value="Save">
@@ -27,5 +27,4 @@
 
 <?php
 }
-mysqli_close($connection);
 ?>

@@ -1,5 +1,3 @@
-
-
 <div class="row">
 <div class="col s6 m12">
     <div class="card">

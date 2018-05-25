@@ -10,10 +10,10 @@ require_once("./pagesbackendcontroller/editproduct.php");
         <div class="card-panel">
         <span class="flow-text">
 
-           <b>Id :</b> <?php echo $row['productId']; ?> <br/>
-            <b>Name :</b> <?php echo $row['productName']; ?> <br/>
-            <b>Code :</b> <?php echo $row['code']; ?> <br/>
-            <b>Price :</b> <?php echo $row['price']; ?> <br/>
+           <b>Id :</b> <?php echo trim(htmlspecialchars( $row['productId'])); ?> <br/>
+            <b>Name :</b> <?php echo trim(htmlspecialchars( $row['productName'])); ?> <br/>
+            <b>Code :</b> <?php echo trim(htmlspecialchars( $row['code'])); ?> <br/>
+            <b>Price :</b> <?php echo trim(htmlspecialchars( $row['price'])); ?> <br/>
 
             <?php
             //DAILYSPECIALPRICE
@@ -28,16 +28,16 @@ require_once("./pagesbackendcontroller/editproduct.php");
                 echo "<b>Offer price : </b> $row[isDailySpecialOffer]<br/>";}
             //DAILYSPECIALPRICE ENDS
             ?>
-            <b>Description:</b> <?php $row['description']; ?> <br/>
-            <b>Image:</b> <?php $row['productPicture'];?> <br /> <img src="./images/<?php echo $row['productPicture']; ?>" width=\"100\" > <br/>
+            <b>Description:</b> <?php trim(htmlspecialchars( $row['description'])); ?> <br/>
+            <b>Image:</b> <?php trim(htmlspecialchars( $row['productPicture']));?> <br /> <img src="./images/<?php echo $row['productPicture']; ?>" width=\"100\" > <br/>
 
 
             <form name="upload" method="post" action="./pagesbackendcontroller/editproduct.php">
-                    <b>Image :</b> <input type="file" name="image" value=""><?php echo $row['productPicture']; ?><br />
-                    <b>Product Name :</b><textarea name="productName"><?php echo $row['productName']; ?></textarea><br />
-                    <b>Code :</b><textarea name="code"><?php echo $row['code']; ?></textarea><br />
-                    <b>Description :</b><br> <textarea name="desc"><?php echo $row['description']; ?></textarea><br />
-                    <b>Price :</b><br> <textarea name="price"><?php echo $row['price']; ?></textarea><br />
+                    <b>Image :</b> <input type="file" name="image" value=""><?php echo trim(htmlspecialchars(  $row['productPicture'])); ?><br />
+                    <b>Product Name :</b><textarea name="productName"><?php echo trim(htmlspecialchars( $row['productName'])); ?></textarea><br />
+                    <b>Code :</b><textarea name="code"><?php echo trim(htmlspecialchars( $row['code'])); ?></textarea><br />
+                    <b>Description :</b><br> <textarea name="desc"><?php echo trim(htmlspecialchars( $row['description'])); ?></textarea><br />
+                    <b>Price :</b><br> <textarea name="price"><?php echo trim(htmlspecialchars( $row['price'])); ?></textarea><br />
             </form>
 
                     <input class="waves-effect waves-light btn" name="Submit" type="submit" value="Save">
