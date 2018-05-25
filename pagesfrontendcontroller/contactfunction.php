@@ -5,6 +5,22 @@ if(isset($_POST['email'])) {
     $email_to = "diazjorgensenpatricia@gmail.com";
     $subject = "Subject";
 
+    $url = 'https://www.google.com/recaptcha/api/siteverify';
+    $data = array(
+        'secret' => '6LchVFsUAAAAAIsTdGZf8hWcW6MAqxerk8FBGSBo',
+        'response' => $_POST["g-recaptcha-response"]
+    );
+
+    $options = array(
+        'http' => array (
+            'method' => 'POST',
+            'content' => http_build_query($data)
+        )
+    );
+    $context  = stream_context_create($options);
+    $verify = file_get_contents($url, false, $context);
+    $captcha_success=json_decode($verify);
+
     function err($error) {
         echo "Error processing your form input<br/><br/>";
         echo "<b>The errors are:</b><br/>";
@@ -19,9 +35,9 @@ if(isset($_POST['email'])) {
         err('no input to validate.');
     }
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    $name = trim(htmlspecialchars($_POST['name']));
+    $email = trim(htmlspecialchars($_POST['email']));
+    $message = trim(htmlspecialchars($_POST['message']));
 
     $err_msg = "";
 

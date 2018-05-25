@@ -1,11 +1,5 @@
 <?php require_once("./pagesfrontendcontroller/loginuser.php"); ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-</head>
-<body>
-
 <h6>To be able to save products into favorites or/and purchase we ask you to log in, thanks.</h6>
 
 <h4>Please login</h4>
@@ -25,6 +19,3 @@
     <a class="waves-effect waves-teal btn-flat" href="index.php?page=newuser">Sign up</a>
 
 </div>
-
-</body>
-</html>

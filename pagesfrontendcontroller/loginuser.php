@@ -1,9 +1,8 @@
-<?php require_once("./includes/connection.php"); ?>
-<?php require_once("./includes/sessionuser.php"); ?>
-<?php require_once("./includes/functions.php"); ?>
-<?php
+<?php require_once("./includes/sessionuser.php");
+require_once("./includes/functions.php");
+
 		if (logged_in()) {
-		redirect_to("./pagesfrontend/frontpageuser.php");
+		redirect_to("index.php");
 	}
 
 	// START FORM PROCESSING
@@ -19,9 +18,9 @@
 				// and only 1 match
 				$found_user = mysqli_fetch_array($result);
                 if(password_verify($password, $found_user['password'])){
-				    $_SESSION['user_Id'] = $found_user['userId'];
+				    $_SESSION['userId'] = $found_user['userId'];
 				    $_SESSION['userName'] = $found_user['userName'];
-				    redirect_to("./pagesfrontend/frontpageuser.php");
+				    redirect_to("index.php");
 			} else {
 				// username/password combo was not found in the database
 				$message = "Username/password combination incorrect.<br />
@@ -35,4 +34,3 @@
 if (!empty($message)) {echo "<p>" . $message . "</p>";}
 
 if (isset($connection)){mysqli_close($connection);}
-?>

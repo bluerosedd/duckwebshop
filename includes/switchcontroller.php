@@ -16,6 +16,10 @@ switch($page) {
         include('pagesfrontend/contact.php');
         break;
 
+    case "news":
+        include('pagesfrontend/news.php');
+        break;
+
     case "products":
         include('pagesfrontend/products.php');
         break;
@@ -36,6 +40,14 @@ switch($page) {
         include('pagesfrontendcontroller/logoutuser.php');
         break;
 
+    case "profileuser":
+        include('pagesfrontend/userprofile.php');
+        break;
+
+    case "profileedit":
+        include('pagesfrontend/userprofileedit.php');
+        break;
+
     case "aboutus":
         include('pagesfrontend/about.php');
         break;
@@ -47,7 +59,6 @@ switch($page) {
     case "purchase":
         include('pagesfrontend/purchase.php');
         break;
-
 
 
 }

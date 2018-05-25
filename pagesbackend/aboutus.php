@@ -1,5 +1,4 @@
-<?php require_once("./includes/connection.php");
-require_once("./includes/sessionbackend.php");?>
+<?php require_once("./includes/sessionbackend.php");?>
 
 
         <div class="col s6 m12">
@@ -28,14 +27,14 @@ while($row=mysqli_fetch_array($result)) {
 
             <div align="center" class="card-content">
                 <ul >
-                    <li class="tittlecolor" style="font-size: 17px"><h5><?php echo $row['name']?> </h5></li>
-                    <li style="font-size: 17px"><?php echo $row['description']?> </li>
+                    <li class="tittlecolor" style="font-size: 17px"><h5><?php echo trim(htmlspecialchars($row['name']));?> </h5></li>
+                    <li style="font-size: 17px"><?php echo  trim(htmlspecialchars($row['description']));?> </li>
 
                 </ul>
             </div>
 
             <div class="cardlinks">
-                <a href="./backendindex.php?page=aboutuseditb&companyId=<?php echo $row['companyId']?>"
+                <a href="./backendindex.php?page=aboutuseditb&companyId=<?php echo  trim(htmlspecialchars($row['companyId']));?>"
                    onclick="return confirm('Are you sure you want to edit this product?');"
                    class="waves-effect waves-light btn">Edit information
                 </a>
@@ -52,5 +51,5 @@ while($row=mysqli_fetch_array($result)) {
     }
 
 
-}mysqli_close($connection);
+}
 ?>

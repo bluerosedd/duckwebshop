@@ -1,5 +1,8 @@
-<?php require_once("includes/connection.php");
+<?php
+ob_start();
+require_once("includes/connection.php");
 require_once("./includes/sessionbackend.php");
+require_once("./includes/dbcontroller.php");
 $employeeId = (isset($_SESSION['employeeId']) ? $_SESSION['employeeId'] : '');
 $result=mysqli_query($connection, "SELECT * FROM employees WHERE employeeId='$employeeId'")or die(mysqli_error());
 $row=mysqli_fetch_array($result);
@@ -32,7 +35,7 @@ $row=mysqli_fetch_array($result);
                 <?php if(isset($_SESSION['employeeId'])){ ?>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-                    <li class="<?php if(!isset($_GET['page'])) {echo 'active';} ?>">
+                    <li class="<?php if(isset($_GET['page'])) {echo 'active';} ?>">
                        <a class="textcolor"  href="backendindex.php?page=profileb&employeeId=<?php echo $row['employeeId']?>"><i class="material-icons">person</i></a>
                      </li>
 

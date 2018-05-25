@@ -1,5 +1,11 @@
 <?php
+ob_start();
 require_once("includes/connection.php");
+require_once("./includes/sessionuser.php");
+require_once("./includes/dbcontroller.php");
+$userId = (isset($_SESSION['userId']) ? $_SESSION['userId'] : '');
+$result=mysqli_query($connection, "SELECT * FROM users WHERE userId='$userId'")or die(mysqli_error());
+$row=mysqli_fetch_array($result);
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +18,7 @@ require_once("includes/connection.php");
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="style/materialize/css/custom.css" media="screen,projection"/>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 
@@ -20,14 +27,22 @@ require_once("includes/connection.php");
         <div class="nav-wrapper coloredIcons">
 
             <a href="index.php" class="brand-logo center"><img class="responsive-img" src="images/DUCKY2-01-01.png" alt="DuckLogo"></a>
+            <?php if(isset($_SESSION['userId'])){ ?>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li class="<?php if(isset($_GET['page'])) {echo 'active';} ?>">
+                        <a class="textcolor"  href="index.php?page=profileuser&userId=<?php echo $row['userId']?>"><i class="material-icons">person</i></a>
+                    </li>
+                    <li><a class="textcolor" href="index.php?page=logout">Log out</a></li>
+                </ul>
+            <?php } ?>
 
             <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+                <?php if(!isset($_SESSION['userId'])){ ?>
                 <li class="<?php if(isset($_GET['page']) && $_GET['page']=='login') {echo 'active';} ?>">
                     <a class="textcolor" href="index.php?page=login">Log in/Sign up</a>
                 </li>
-                <li >
-                    <a  class="textcolor" href="#!"><i class="material-icons">favorite</i></a>
-                </li>
+                <?php } ?>
                 <li class="<?php if(isset($_GET['page']) && $_GET['page']=='cart') {echo 'active';} ?>">
                    <a  class="textcolor" href="index.php?page=cart"><i class="material-icons">add_shopping_cart</i></a>
                 </li>
@@ -44,6 +59,9 @@ require_once("includes/connection.php");
 
             <li class="<?php if(!isset($_GET['page'])) {echo 'active';} ?>">
                 <a class="textcolor-extended" href="index.php">Home</a>
+            </li>
+            <li class="<?php if(isset($_GET['page']) && $_GET['page']=='news') {echo 'active';} ?>">
+                <a class="textcolor-extended" href="index.php?page=news">News</a>
             </li>
             <li class="<?php if(isset($_GET['page']) && $_GET['page']=='products') {echo 'active';} ?>">
                 <a class="textcolor-extended" href="index.php?page=products">Products</a>
