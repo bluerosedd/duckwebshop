@@ -1,5 +1,4 @@
 <?php
-require_once("./includes/connection.php");
 require_once("./includes/functions.php");
 
 if(isset($_GET['companyId'])){

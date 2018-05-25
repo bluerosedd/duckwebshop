@@ -1,4 +1,3 @@
-<?php require_once("./includes/sessionbackend.php"); ?>
 <?php require_once("./includes/functions.php"); ?>
 
 <?php

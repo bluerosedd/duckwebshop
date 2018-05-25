@@ -19,13 +19,13 @@ while($row=mysqli_fetch_array($result)) {
 
             <div class="card-content">
                 <ul>
-                    <li style="font-size: 17px"><?php echo $row['newsTitle'] ?> </li>
-                    <li style="font-size: 17px"><?php echo $row['description'] ?> </li>
-                    <li style="font-size: 17px"><b>Created:</b><?php echo $row['createdDay'];
+                    <li style="font-size: 17px"><?php echo trim(htmlspecialchars($row['newsTitle'])); ?> </li>
+                    <li style="font-size: 17px"><?php echo trim(htmlspecialchars($row['description'])); ?> </li>
+                    <li style="font-size: 17px"><b>Created:</b><?php echo trim(htmlspecialchars($row['createdDay']));
                         echo "/";
-                        echo $row['createdMonth'];
+                        echo trim(htmlspecialchars($row['createdMonth']));
                         echo "/";
-                        echo $row['createdYear'] ?> </li>
+                        echo trim(htmlspecialchars($row['createdYear'])); ?> </li>
                 </ul>
             </div>
         </div>

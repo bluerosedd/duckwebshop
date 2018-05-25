@@ -1,5 +1,4 @@
-<?php require_once("./includes/sessionbackend.php");
-require_once("./includes/connection.php");
+<?php
 require_once("./includes/functions.php");
 
 $query = "SELECT * FROM company WHERE companyId = 1";

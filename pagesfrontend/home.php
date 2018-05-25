@@ -31,11 +31,11 @@ while($row=mysqli_fetch_array($result)) {
 
             <div class="card-content">
                 <ul>
-                    <li style="font-size: 17px"><?php echo $row['productName']?> </li>
+                    <li style="font-size: 17px"><?php echo trim(htmlspecialchars($row['productName']));?> </li>
                     <li style="font-size: 17px"> <?php if($row['isDailySpecialOffer'] == NULL){
-                            echo "<b>Price:</b>"; echo $row['price'];
+                            echo "<b>Price:</b>"; echo trim(htmlspecialchars($row['price']));
                         }elseif($row['isDailySpecialOffer'] == !NULL){
-                            echo "<b style='color:#faa61a;'>OfferPrice: </b>"; echo $row['isDailySpecialOffer'];
+                            echo "<b style='color:#faa61a;'>OfferPrice: </b>"; echo trim(htmlspecialchars($row['isDailySpecialOffer']));
                         } ?>
                         <b>kr</b></li>
 

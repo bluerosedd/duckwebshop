@@ -11,18 +11,18 @@ require_once("./pagesfrontendcontroller/userprofileedit.php");
         <span class="flow-text">
             <form name="upload" method="post" action="./index.php?page=profileedit&action=update&userId=<?php echo $row['userId']; ?>">
                 <p class="flow-text" style="font-size:18px">
-                  <b>User Name :</b><br><textarea name="userName" cols="40"><?php echo $row['userName']; ?></textarea><br />
+                  <b>User Name :</b><br><textarea name="userName" cols="40"><?php echo trim(htmlspecialchars($row['userName'])); ?></textarea><br />
                     <b>Password :</b><br><textarea name="password" cols="40">**********</textarea><br />
-                    <b>First Name :</b><br><textarea name="firstName" cols="40"><?php echo $row['firstName']; ?></textarea><br />
-                    <b>Last Name :</b><br> <textarea name="lastName" cols="40"><?php echo $row['lastName']; ?></textarea><br />
-                    <b>E-mail :</b><br> <textarea name="email" cols="40"><?php echo $row['emailAddress']; ?></textarea><br />
-                    <b>Birth date : </b><br><textarea type="numbers" name="birthDay" cols="11"><?php echo $row['birthDay']; ?></textarea><br />
-                    <b>Birth month :</b><br><textarea type="numbers" name="birthMonth" cols="11"><?php echo $row['birthMonth']; ?></textarea><br />
-                    <b>Birth year :</b><br><textarea type="numbers" name="birthYear" cols="11"><?php echo $row['birthYear']; ?></textarea><br />
-                    <b>Street Name :</b><br> <textarea name="streetName" cols="40"><?php echo $row['streetName']; ?></textarea><br />
-                    <b>Number :</b><br> <textarea name="streetNumber" cols="40"><?php echo $row['streetNumber']; ?></textarea><br />
-                    <b>City :</b><br> <textarea name="city" cols="40"><?php echo $row['city']; ?></textarea><br />
-                    <b>Zip Code :</b><br><textarea name="zipCode" cols="40"><?php echo $row['zipCode']; ?></textarea><br />
+                    <b>First Name :</b><br><textarea name="firstName" cols="40"><?php echo trim(htmlspecialchars($row['firstName'])); ?></textarea><br />
+                    <b>Last Name :</b><br> <textarea name="lastName" cols="40"><?php echo trim(htmlspecialchars($row['lastName'])); ?></textarea><br />
+                    <b>E-mail :</b><br> <textarea name="email" cols="40"><?php echo trim(htmlspecialchars($row['emailAddress'])); ?></textarea><br />
+                    <b>Birth date : </b><br><textarea type="numbers" name="birthDay" cols="11"><?php echo trim(htmlspecialchars($row['birthDay'])); ?></textarea><br />
+                    <b>Birth month :</b><br><textarea type="numbers" name="birthMonth" cols="11"><?php echo trim(htmlspecialchars($row['birthMonth'])); ?></textarea><br />
+                    <b>Birth year :</b><br><textarea type="numbers" name="birthYear" cols="11"><?php echo trim(htmlspecialchars($row['birthYear'])); ?></textarea><br />
+                    <b>Street Name :</b><br> <textarea name="streetName" cols="40"><?php echo trim(htmlspecialchars($row['streetName'])); ?></textarea><br />
+                    <b>Number :</b><br> <textarea name="streetNumber" cols="40"><?php echo trim(htmlspecialchars($row['streetNumber'])); ?></textarea><br />
+                    <b>City :</b><br> <textarea name="city" cols="40"><?php echo trim(htmlspecialchars($row['city'])); ?></textarea><br />
+                    <b>Zip Code :</b><br><textarea name="zipCode" cols="40"><?php echo trim(htmlspecialchars($row['zipCode'])); ?></textarea><br />
 
                 </p>
                 <li class="divider"></li></br>

@@ -36,10 +36,10 @@ $products = $stmt->fetchAll();
             <tbody>
             <?php foreach($_SESSION['products'] as $key=>$row):?>
             <tr>
-                <td><?php print $row["productName"]; ?></td>
-                <td><?php print $row["code"]; ?></td>
-                <td><?php print $row["quantity"]; ?></td>
-                <td><?php echo "kr"; print $row["price"]; ?></td>
+                <td><?php print trim(htmlspecialchars($row["productName"])); ?></td>
+                <td><?php print trim(htmlspecialchars($row["code"])); ?></td>
+                <td><?php print trim(htmlspecialchars($row["quantity"])); ?></td>
+                <td><?php echo "kr"; print trim(htmlspecialchars($row["price"])); ?></td>
                 <td>
                     <a href="./index.php?page=cart&action=empty&code=<?php print $key?>"
                        onclick="return confirm('Are you sure you want to delete this product?');"

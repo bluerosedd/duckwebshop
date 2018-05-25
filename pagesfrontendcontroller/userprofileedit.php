@@ -12,18 +12,18 @@ $userId=$row['userId'];
 if (isset($_GET['action']) && $_GET['action'] == 'update') {
     $errors = array();
 
-    $newUserName = $_POST['userName'];
-    $newPassword = $_POST['password'];
-    $newFirstName = $_POST['firstName'];
-    $newLastName = $_POST['lastName'];
-    $newEmail = $_POST['email'];
-    $newStreetName = $_POST['streetName'];
-    $newStreetNumber = $_POST['streetNumber'];
-    $newCity = $_POST['city'];
-    $newZipCode = $_POST['zipCode'];
-    $newBirthDay = $_POST['birthDay'];
-    $newBirthMonth = $_POST['birthMonth'];
-    $newBirthYear = $_POST['birthYear'];
+    $newUserName = trim(htmlspecialchars($_POST['userName']));
+    $newPassword = trim(htmlspecialchars($_POST['password']));
+    $newFirstName = trim(htmlspecialchars($_POST['firstName']));
+    $newLastName = trim(htmlspecialchars($_POST['lastName']));
+    $newEmail = trim(htmlspecialchars($_POST['email']));
+    $newStreetName = trim(htmlspecialchars($_POST['streetName']));
+    $newStreetNumber = trim(htmlspecialchars($_POST['streetNumber']));
+    $newCity = trim(htmlspecialchars($_POST['city']));
+    $newZipCode = trim(htmlspecialchars($_POST['zipCode']));
+    $newBirthDay = trim(htmlspecialchars($_POST['birthDay']));
+    $newBirthMonth = trim(htmlspecialchars($_POST['birthMonth']));
+    $newBirthYear = trim(htmlspecialchars($_POST['birthYear']));
 
     $iterations = ['cost' => 15];
     $hashed_password = password_hash($newPassword, PASSWORD_BCRYPT, $iterations);

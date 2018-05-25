@@ -1,11 +1,5 @@
 <?php require_once("./pagesfrontendcontroller/newuser.php");?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-</head>
-<body>
-
 <div clas="row">
     <div class="card-panel">
         <span class="flow-text">
@@ -47,5 +41,3 @@
     </span>
     </div>
 </div>
-</body>
-</html>

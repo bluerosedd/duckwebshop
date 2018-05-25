@@ -19,7 +19,7 @@ require_once("./pagesbackendcontroller/editproduct.php");
             //DAILYSPECIALPRICE
             if($row['isDailySpecialOffer'] == NULL){
                 echo "<b>Offer price :No daily offer</b> <br/>
-                          <a href=\"backendindex.php?page=dailyofferb&productId=echo $row[productId]?>\"
+                          <a href=\"backendindex.php?page=dailyofferb&productId=$row[productId]\"
                           onclick=\"return confirm('Do you want to exit this page to create a daily offer?');\"
                           class=\"waves-effect waves-light btn\">Create daily offer</a>
                           <br/>";

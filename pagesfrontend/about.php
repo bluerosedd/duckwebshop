@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-</head>
-
-<body>
 <div class="tittlecolor">
     <h4 >DUCKY HISTORY</h4>
 </div>
-
-
 <div class="row">
     <div >
         <div class="card-panel">
@@ -21,7 +13,7 @@
                 echo "<table>";
 
                 while($row=mysqli_fetch_array($result)) {
-                    echo  $row['description'];
+                    echo  trim(htmlspecialchars($row['description']));
 
                     echo "</table>";
 
@@ -33,6 +25,3 @@
     </div>
 </div>
 
-
-</body>
-</html>

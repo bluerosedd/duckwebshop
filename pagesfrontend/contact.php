@@ -28,11 +28,11 @@ require_once("./pagesfrontendcontroller/contactus.php"); ?>
             <div align="center" class="card-content">
                 <ul>
                     <li class="tittlecolor" style="font-size: 17px"><h5>Opening hours</h5></li>
-                    <li ><h5><?php echo $row['openingHours'] ?> </h5></li>
+                    <li ><h5><?php echo trim(htmlspecialchars($row['openingHours'])); ?> </h5></li>
                     <li class="tittlecolor" style="font-size: 17px"><h5>Phone:</h5></li>
-                    <li><h5><?php echo $row['phone'] ?> </h5></li>
+                    <li><h5><?php echo trim(htmlspecialchars($row['phone'])); ?> </h5></li>
                     <li class="tittlecolor" style="font-size: 17px"><h5>Email:</h5></li>
-                    <li><h5><?php echo $row['email'] ?> </h5></li>
+                    <li><h5><?php echo trim(htmlspecialchars($row['email'])); ?> </h5></li>
                 </ul>
             </div>
         </div>

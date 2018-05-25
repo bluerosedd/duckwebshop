@@ -15,21 +15,21 @@ require_once("./pagesfrontendcontroller/userprofile.php"); ?>
         <div class="card-content">
             <form action="" method="post">
                 <p class="flow-text" style="font-size:18px">
-                <b>User Name :</b><br><?php echo $row['userName']; ?><br />
+                <b>User Name :</b><br><?php echo trim(htmlspecialchars($row['userName'])); ?><br />
                 <b>Password :</b><br>**********</textarea><br />
-                <b>First Name :</b><br><?php echo $row['firstName']; ?><br />
-                <b>Last Name :</b><br> <?php echo $row['lastName']; ?><br />
-                <b>E-mail :</b><br> <?php echo $row['emailAddress']; ?><br />
-                <b>Birthday :</b><br><?php echo $row['birthDay'];
+                <b>First Name :</b><br><?php echo trim(htmlspecialchars($row['firstName'])); ?><br />
+                <b>Last Name :</b><br> <?php echo trim(htmlspecialchars($row['lastName'])); ?><br />
+                <b>E-mail :</b><br> <?php echo trim(htmlspecialchars($row['emailAddress'])); ?><br />
+                <b>Birthday :</b><br><?php echo trim(htmlspecialchars($row['birthDay']));
                 echo "/";
                 echo $row['birthMonth'];
                 echo "/";
                 echo $row['birthYear'] ?> </li><br />
 
-                <b>Street Name :</b><br> <?php echo $row['streetName']; ?><br />
-                <b>Number :</b><br> <?php echo $row['streetNumber']; ?><br />
-                <b>City :</b><br> <?php echo $row['city']; ?><br />
-                <b>Zip Code :</b><br> <?php echo $row['zipCode']; ?><br />
+                <b>Street Name :</b><br> <?php echo trim(htmlspecialchars($row['streetName'])); ?><br />
+                <b>Number :</b><br> <?php echo trim(htmlspecialchars($row['streetNumber'])); ?><br />
+                <b>City :</b><br> <?php echo trim(htmlspecialchars($row['city'])); ?><br />
+                <b>Zip Code :</b><br> <?php echo trim(htmlspecialchars($row['zipCode'])); ?><br />
 
                 </p>
                 <li class="divider"></li></br>
